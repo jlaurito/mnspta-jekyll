@@ -1,0 +1,133 @@
+# Executive Board and Parent Leaders.
+#
+# This file is the single source of truth for /executive-board/.
+# To roll the page over to a new school year:
+#   1. Update `school_year` below.
+#   2. Edit member lists under `executive_board`.
+#   3. Adjust `parent_leaders` if any role moved or was added/removed.
+#   4. Commit. The page rebuilds automatically.
+#
+# Schema:
+#   role     — string, the section/role label shown on the page
+#   members  — optional list of names
+#   email    — optional local-part of an @mnspta.org address
+#              (renders as "<email> [at] mnspta [dot] org")
+#   sub_roles — optional list of {name, email} for groups with
+#              multiple contact addresses (e.g. Communications Team)
+
+school_year: "2025–2026"
+
+executive_board:
+  - role: Co-Presidents
+    members:
+      - Ben Holzer
+      - Sharon Abramzon D'Agostino
+
+  - role: Co-Vice Presidents
+    members:
+      - Michelle Abella Schwartz
+      - Elena Mandell
+      - Josh Kaufman
+
+  - role: Recording Secretary
+    members:
+      - Ariella Lustberg
+      - Alexis Bancroft
+
+  - role: Treasurer
+    members:
+      - Tamara Dethlefsen
+    email: treasurer
+
+  - role: Assistant Treasurer
+    members:
+      - Nellie Harkins
+      - Jenny Cornetet
+
+  - role: First Grade Delegates
+    members:
+      - Alexis Bancroft
+      - Ariella Lustberg
+      - Caitlin Benson
+    email: firstgradedelegates
+
+  - role: Second Grade Delegates
+    members:
+      - Jewel Clarke
+      - Kristen Marsh
+      - Jackie Levy
+    email: secondgradedelegates
+
+  - role: Third Grade Delegates
+    members:
+      - Nellie Harkins
+      - Jennifer Osterweil
+      - Shruti Raju
+    email: thirdgradedelegates
+
+  - role: Fourth Grade Delegates
+    members:
+      - Meredith Karson
+      - Caroline Paris
+    email: fourthgradedelegates
+
+  - role: Fifth Grade Delegates
+    members:
+      - Stacey Garfinkle
+      - Kristen Serrao
+      - Emily McKeough
+    email: fifthgradedelegates
+
+  - role: School Leadership Team
+    members:
+      - Nadia Levy
+      - Michael Horenstein
+      - Pamela Mclaughlin
+      - Elizabeth Wolf
+      - Caroline Paris
+      - Jennifer Pomerantz
+      - Fred Isquith
+    email: slt
+
+parent_leaders:
+  - role: MNS Has Talent
+    email: talentshow
+
+  - role: Gala / Auction Co-Chairs
+    email: auction
+
+  - role: Class Auction Projects Coordinator
+    email: auctionprojects
+
+  - role: Auction Raffles
+    email: raffles
+
+  - role: Annual Appeal
+    email: annualappeal
+
+  - role: Photo Day
+    email: photoday
+
+  - role: Fundraising
+    email: fundraising
+
+  - role: Communications Team
+    sub_roles:
+      - name: MNS This Week
+        email: thisweek
+      - name: MNS Bulletin
+        email: mnsbulletin
+
+  - role: Tech Team
+    members:
+      - Josh Laurito
+    email: webmaster
+
+  - role: School Store
+    email: schoolstore
+
+  - role: Lice Checks
+    email: licecheck
+
+  - role: Rooftop Task Force
+    email: rooftop

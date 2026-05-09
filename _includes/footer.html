@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__brand">PS290 PTA</p>
+    <p class="site-footer__address">{{ site.school.address }} · {{ site.school.phone }}</p>
+    <p class="site-footer__links">
+      <a href="mailto:info@mnspta.org">info@mnspta.org</a>
+      <span class="dot">·</span>
+      <a href="{{ '/calendar-subscribe/' | relative_url }}">Subscribe to calendar</a>
+      <span class="dot">·</span>
+      <a href="{{ site.external.ps290_url }}">P.S. 290</a>
+    </p>
+    <p class="site-footer__copyright">© {{ "now" | date: "%Y" }} PS290 PTA</p>
+  </div>
+</footer>

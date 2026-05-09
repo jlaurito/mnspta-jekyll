@@ -1,0 +1,153 @@
+# MNS PTA — Jekyll site
+
+Static replacement for the Neon-hosted version of [www.mnspta.org](https://www.mnspta.org).
+Built with [Jekyll](https://jekyllrb.com/), deployable for free on
+[GitHub Pages](https://pages.github.com/) or [Cloudflare Pages](https://pages.cloudflare.com/).
+
+## What's here
+
+```
+.
+├── _config.yml              ← site-wide settings, external URLs
+├── _data/events.yml         ← upcoming events (edit YAML, not HTML)
+├── _includes/               ← header & footer partials
+├── _layouts/                ← page templates
+├── assets/css/main.css      ← the only stylesheet
+├── assets/images/           ← downloaded by scripts/download_assets.py
+├── scripts/download_assets.py ← run once to grab images off Neon CDN
+├── *.md                     ← one file per page
+└── Gemfile                  ← pins to GitHub Pages gem versions
+```
+
+Each page is a markdown file with a small front-matter block. To edit a
+page's text, open the `.md` file, change the words, commit. That's it.
+
+## First-time setup
+
+### 1. Download the images off the Neon CDN
+
+```bash
+python3 scripts/download_assets.py
+```
+
+Run this **before** cancelling Neon — once Neon is gone, the CDN URLs die.
+The script is idempotent; re-running it skips files that already exist.
+
+### 2. Install Jekyll locally (one-time)
+
+Requires Ruby 3.1+ and Bundler. On macOS the easiest path is:
+
+```bash
+brew install ruby chruby ruby-install
+ruby-install ruby 3.3.0
+# follow chruby's instructions to add it to your shell, then:
+chruby ruby-3.3.0
+gem install bundler jekyll
+```
+
+Then in this directory:
+
+```bash
+bundle install
+```
+
+### 3. Run locally
+
+```bash
+bundle exec jekyll serve --livereload
+```
+
+Open <http://localhost:4000>. Pages refresh automatically as you save.
+
+## Editing common things
+
+**Page text** — open the page's `.md` file, edit, save.
+
+**Adding/removing an upcoming event** — edit `_data/events.yml`. The
+`/upcoming-events/` page renders the list automatically.
+
+**Updating the executive board for a new school year** — edit
+`_data/board.yml`. The page renders from the data file, so changing a name,
+adding a delegate, or rolling over the school year is just a YAML edit.
+
+**Changing colors or fonts** — edit the CSS variables at the top of
+`assets/css/main.css`.
+
+**Adding a new page** — drop a new `.md` file at the repo root with this
+front matter:
+
+```yaml
+---
+layout: page
+title: My new page
+permalink: /my-new-page/
+---
+```
+
+…then add a link to it in `_includes/nav.html`.
+
+## Deploying
+
+### Option A — GitHub Pages (recommended)
+
+1. Push this repo to GitHub.
+2. **Settings → Pages → Source:** "Deploy from a branch", branch `main`,
+   folder `/` (root).
+3. **Settings → Pages → Custom domain:** `www.mnspta.org`.
+4. At the DNS provider, create a CNAME record:
+   `www → <your-github-username>.github.io`.
+   For the apex `mnspta.org`, add an ALIAS / ANAME / forwarding record per
+   [GitHub's docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+5. Enable "Enforce HTTPS" once the cert provisions (a few minutes).
+
+GitHub Pages rebuilds on every push to `main`. No Action needed for the
+plugins listed here — they're on the
+[supported list](https://pages.github.com/versions/).
+
+### Option B — Cloudflare Pages
+
+Connect the GitHub repo, set build command `bundle exec jekyll build`,
+output directory `_site`. Free, fast, also issues TLS automatically.
+
+## Cutover plan
+
+1. Run `download_assets.py`, commit `assets/images/` to the repo.
+2. Push to GitHub, deploy to Pages, point a temporary subdomain
+   (`new.mnspta.org` or similar) at it. Verify visually.
+3. Update DNS to point `www.mnspta.org` at GitHub Pages.
+4. Wait ~24 hours for propagation, verify.
+5. Cancel Neon Websites (keep the Neon CRM subscription — donations,
+   events, member directory, login all still live there).
+
+## Things to clean up before going live
+
+These are flagged with `<!-- TODO -->` or in callouts in the relevant pages:
+
+- **`after-school.md`** — the live page references Sept 2022 dates. Update
+  to the current term.
+- **`about-mns-pta.md`** — the "Read our bylaws" line has no link on the
+  current site. Either drop the bylaws PDF in `assets/` and link it, or
+  remove the line.
+- **`_data/events.yml`** — currently empty/commented. Add this season's
+  events when you're ready.
+- **Old WordPress URLs** — the legacy site exposes `/wp-content/uploads/...`
+  paths (e.g., the 2017 Parent Handbook PDF). If anything is still linked
+  externally, copy those PDFs into `assets/docs/` and add `redirect_from`
+  entries on a stub page, or set up redirects at the CDN.
+
+## What stays external
+
+These are kept as outbound links — none of them needs to live on the new
+site:
+
+| Service | Used for |
+|---|---|
+| Neon CRM (`ps290pta.app.neoncrm.com`) | Donations, event registration, parent directory, login |
+| Square (`ps290.square.site`) | School store |
+| Google Calendar | Calendar feed |
+| Google Forms | Volunteer sign-up |
+| Google Apps Scripts | Expense reimbursement, unpaid invoices forms |
+| `api.neonemails.com` | Hosted welcome email |
+
+All of these URLs are centralized in the `external:` block of
+`_config.yml`, so if any change you only update one place.

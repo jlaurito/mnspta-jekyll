@@ -1,0 +1,24 @@
+# Upcoming events. Add or remove entries here — they render automatically
+# on the /upcoming-events/ page in the order listed.
+#
+# Fields:
+#   title:        Event name
+#   date:         Free-form date string ("September 10 @ 1:35 PM")
+#   price:        Optional ("$45")
+#   description:  Optional one-line description
+#   image:        Optional path to an image in /assets/images/events/
+#   register_url: Optional Neon CRM event registration URL
+#
+# Example: keep the list empty (or comment all out) when nothing is upcoming.
+
+# - title: Yankees vs Brewers
+#   date: September 10 @ 1:35 PM
+#   price: $45
+#   image: /assets/images/events/yankees-2023.jpg
+#   register_url: https://ps290pta.app.neoncrm.com/np/clients/ps290pta/event.jsp?event=374
+#
+# - title: Mets vs Phillies
+#   date: October 1 @ 3:10 PM
+#   price: $45
+#   image: /assets/images/events/mets-2023.jpg
+#   register_url: https://ps290pta.app.neoncrm.com/event.jsp?event=375
