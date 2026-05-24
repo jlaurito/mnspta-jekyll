@@ -35,21 +35,31 @@ The script is idempotent; re-running it skips files that already exist.
 
 ### 2. Install Jekyll locally (one-time)
 
-Requires Ruby 3.1+ and Bundler. On macOS the easiest path is:
+Requires Ruby 3.1+ and Bundler. This project uses **modern Jekyll 4**, not
+the legacy `github-pages` gem, so any current Ruby 3.x works.
+
+**Important:** as of Dec 2025, `brew install ruby` installs Ruby 4.0, which
+Jekyll's toolchain may not fully support yet. Pin a known-good Ruby with
+rbenv instead of using the Homebrew default:
 
 ```bash
-brew install ruby chruby ruby-install
-ruby-install ruby 3.3.0
-# follow chruby's instructions to add it to your shell, then:
-chruby ruby-3.3.0
-gem install bundler jekyll
-```
-
-Then in this directory:
-
-```bash
+brew install rbenv
+rbenv init          # then add the printed line to ~/.zshrc and restart your shell
+rbenv install 3.3.6
+cd /path/to/this/repo
+rbenv local 3.3.6   # writes .ruby-version — pins ONLY this folder to 3.3.6
+ruby -v             # confirm it shows 3.3.6 here
+gem install bundler
 bundle install
 ```
+
+`rbenv local` leaves your system Ruby (4.0) untouched everywhere else; the
+pin applies only inside this directory. If a future Jekyll release supports
+Ruby 4 cleanly, you can delete `.ruby-version` and skip rbenv entirely.
+
+> Do **not** use the `github-pages` gem here. It locks the build to GitHub's
+> legacy environment (old Jekyll, old Ruby) and breaks on new Ruby releases.
+> Deployment is handled by GitHub Actions instead — see Deploying below.
 
 ### 3. Run locally
 
@@ -88,21 +98,26 @@ permalink: /my-new-page/
 
 ## Deploying
 
-### Option A — GitHub Pages (recommended)
+### Option A — GitHub Pages via Actions (recommended)
+
+This repo ships a workflow at `.github/workflows/jekyll.yml` that builds
+with modern Jekyll and deploys to Pages automatically.
 
 1. Push this repo to GitHub.
-2. **Settings → Pages → Source:** "Deploy from a branch", branch `main`,
-   folder `/` (root).
-3. **Settings → Pages → Custom domain:** `www.mnspta.org`.
-4. At the DNS provider, create a CNAME record:
+2. **Settings → Pages → Source:** choose **"GitHub Actions"** (not "Deploy
+   from a branch"). The included workflow handles the build.
+3. Push to `main` (or use the Actions tab → "Run workflow"). Watch the build
+   under the **Actions** tab; it builds then deploys.
+4. **Settings → Pages → Custom domain:** `www.mnspta.org`.
+5. At the DNS provider, create a CNAME record:
    `www → <your-github-username>.github.io`.
    For the apex `mnspta.org`, add an ALIAS / ANAME / forwarding record per
    [GitHub's docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-5. Enable "Enforce HTTPS" once the cert provisions (a few minutes).
+6. Enable "Enforce HTTPS" once the cert provisions (a few minutes).
 
-GitHub Pages rebuilds on every push to `main`. No Action needed for the
-plugins listed here — they're on the
-[supported list](https://pages.github.com/versions/).
+Every push to `main` rebuilds and redeploys. Because the build runs the
+Gemfile in CI, the published site matches exactly what you see locally —
+no version drift between local and production.
 
 ### Option B — Cloudflare Pages
 

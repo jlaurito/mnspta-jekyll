@@ -1,24 +1,32 @@
 source "https://rubygems.org"
 
-# Use the github-pages gem so local builds match what GitHub Pages will run.
-# https://pages.github.com/versions/
-gem "github-pages", group: :jekyll_plugins
+# Modern Jekyll 4 — NOT the github-pages gem.
+# The github-pages gem locks you to GitHub's legacy build environment
+# (old Jekyll, old Ruby) and lags badly behind new Ruby releases. We build
+# with GitHub Actions instead (see .github/workflows/jekyll.yml), so we're
+# free to run current Jekyll and a modern Ruby locally.
 
-# Plugins (also enabled in _config.yml)
+ruby ">= 3.1"
+
+gem "jekyll", "~> 4.4"
+
 group :jekyll_plugins do
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
-  gem "jekyll-redirect-from"
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-redirect-from", "~> 0.16"
 end
 
-# Windows and JRuby do not include zoneinfo files
+# Required for Ruby 3.0+ (no longer bundled with Ruby)
+gem "webrick", "~> 1.9"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+
+# Windows / JRuby timezone data
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 1.2"
+  gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end
 
-# Performance booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-
-# Required for Ruby 3.0+
-gem "webrick", "~> 1.7"
+# Faster file watching on Windows
+gem "wdm", "~> 0.2", :platforms => [:mingw, :x64_mingw, :mswin]
