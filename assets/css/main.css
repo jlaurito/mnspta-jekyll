@@ -52,7 +52,7 @@ a {
 a:hover { color: var(--accent-hover); }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-weight: 600;
   font-variation-settings: "opsz" 36;
   color: var(--ink);
@@ -237,7 +237,7 @@ p { margin: 0 0 1em; }
 .page {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 0.5rem 1.5rem 4rem;
 }
 
 .content { max-width: var(--max-w-text); margin: 0 auto; }
@@ -325,9 +325,18 @@ p { margin: 0 0 1em; }
   aspect-ratio: 16 / 6;
   background: var(--bg-tint);
 }
+
 /* Single static image (no .is-slideshow): just fill the box */
-.hero__slideshow:not(.is-slideshow) .hero__slide { position: static; opacity: 1; }
-.hero__slideshow:not(.is-slideshow) .hero__slide img { width: 100%; height: 100%; object-fit: cover; }
+.hero__slideshow:not(.is-slideshow) .hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+}
+.hero__slideshow:not(.is-slideshow) .hero__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Slideshow: stack slides, crossfade between them */
 .hero__slideshow.is-slideshow .hero__slide {

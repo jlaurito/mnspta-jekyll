@@ -14,14 +14,18 @@ school:
 # assets/images/ and add an entry below. To go back to a single static
 # image, leave just one entry. `interval` is seconds between slides.
 hero:
-  interval: 5
+  interval: 3
   slides:
     - image: /assets/images/home-banner.jpg
       alt: Manhattan New School community
-    # - image: /assets/images/hero-2.jpg
-    #   alt: Students on the rooftop
-    # - image: /assets/images/hero-3.jpg
-    #   alt: Fall field day
+    - image: /assets/images/hero-2.jpg
+      alt: Students in rain
+    - image: /assets/images/hero-3.jpg
+      alt: Students at International Day
+    - image: /assets/images/hero-4.jpg
+      alt: Student Self-Portraits
+    - image: /assets/images/hero-5.jpg
+      alt: Students Outside
 
 # External services (not migrated — keep linking out)
 external:

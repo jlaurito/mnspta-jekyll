@@ -91,7 +91,29 @@
 
   <main class="page">
     <div class="home">
-  <section class="hero"><div class="hero__slideshow" data-interval="5" role="region" aria-roledescription="carousel" aria-label="Photos of the MNS community">
+  <section class="hero"><div class="hero__slideshow is-slideshow" data-interval="3" role="region" aria-roledescription="carousel" aria-label="Photos of the MNS community">
+    <div class="hero__slide is-active">
+      <img src="/assets/images/home-banner.jpg" alt="Manhattan New School community" />
+    </div>
+    <div class="hero__slide" aria-hidden="true">
+      <img src="/assets/images/hero-2.jpg" alt="Students in rain" loading="lazy" />
+    </div>
+    <div class="hero__slide" aria-hidden="true">
+      <img src="/assets/images/hero-3.jpg" alt="Students at International Day" loading="lazy" />
+    </div>
+    <div class="hero__slide" aria-hidden="true">
+      <img src="/assets/images/hero-4.jpg" alt="Student Self-Portraits" loading="lazy" />
+    </div>
+    <div class="hero__slide" aria-hidden="true">
+      <img src="/assets/images/hero-5.jpg" alt="Students Outside" loading="lazy" />
+    </div>
+    <div class="hero__dots" role="tablist" aria-label="Choose slide">
+      <button class="hero__dot is-active" type="button" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+      <button class="hero__dot" type="button" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+      <button class="hero__dot" type="button" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+      <button class="hero__dot" type="button" role="tab" aria-label="Slide 4" aria-selected="false"></button>
+      <button class="hero__dot" type="button" role="tab" aria-label="Slide 5" aria-selected="false"></button>
+    </div>
   </div>
   <div class="hero__statement">
     <p>The Manhattan New School Parent-Teacher Association supports the school community, working together to help our children grow into confident, enthusiastic life-long learners.</p>
