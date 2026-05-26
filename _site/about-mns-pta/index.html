@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>About MNS PTA — MNS PTA</title>
+  <meta name="description" content="The Manhattan New School Parent-Teacher Association supports the school community, working together to help our children grow into confident, enthusiastic life-long learners.">
+  <link rel="icon" type="image/png" href="/assets/images/logo_200x200.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <meta property="og:title" content="About MNS PTA — MNS PTA">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/about-mns-pta/">
+  <meta property="og:image" content="http://localhost:4000/assets/images/logo_200x200.png">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <header class="site-header">
+  <div class="site-header__top">
+    <a class="site-header__brand" href="/">
+      <img src="/assets/images/logo-wordmark.png" alt="MNS PTA" />
+    </a>
+    <div class="site-header__meta">
+      <p class="site-header__eyebrow">Parent Teacher Association</p>
+      <p class="site-header__contact">
+        311 E 82nd St, New York, NY 10028 <span class="dot">·</span> (212) 734-7127
+      </p>
+    </div>
+  </div>
+
+  <nav class="site-nav" aria-label="Primary">
+    <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-menu">
+      <span class="site-nav__toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <ul id="site-nav-menu" class="site-nav__menu">
+      <li><a href="/">Home</a></li>
+      <li class="has-submenu">
+        <a href="/about-mns-pta/">About <span aria-hidden="true">▾</span></a>
+        <ul class="site-nav__submenu">
+          <li><a href="/about-mns-pta/">MNS PTA</a></li>
+          <li><a href="/executive-board/">Executive &amp; Parent Leadership</a></li>
+          <li><a href="/and-more/">Volunteer</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="/annual-appeal/">Fundraising <span aria-hidden="true">▾</span></a>
+        <ul class="site-nav__submenu">
+          <li><a href="/annual-appeal/">Annual Appeal</a></li>
+          <li><a href="/shopping-rewards/">Shopping Rewards</a></li>
+          <li><a href="/matching-gifts/">Matching Gifts</a></li>
+          <li><a href="https://ps290.square.site">School Store</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="/after-school/">Programs &amp; Activities <span aria-hidden="true">▾</span></a>
+        <ul class="site-nav__submenu">
+          <li><a href="/mns-cares/">MNS Cares</a></li>
+          <li><a href="/after-school/">After School</a></li>
+          <li><a href="/upcoming-events/">Upcoming Events</a></li>
+        </ul>
+      </li>
+      <li><a href="/neon-account/">Parent Login</a></li>
+      <li><a href="https://www.ps290.org">P.S. 290</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  (function () {
+    var toggle = document.querySelector('.site-nav__toggle');
+    var menu = document.getElementById('site-nav-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function () {
+      var open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    // Mobile: tap parent to expand submenu
+    document.querySelectorAll('.site-nav .has-submenu > a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (window.matchMedia('(max-width: 800px)').matches) {
+          e.preventDefault();
+          link.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  })();
+</script>
+
+  <main class="page">
+    <article class="content">
+  
+    <header class="content__header">
+      <h1>About MNS PTA</h1>
+      
+    </header>
+  
+  <div class="content__body">
+    <p class="lede">At Manhattan New School we understand that the success of our children's school relies on all of us.</p>
+
+<p>The MNS PTA supports the education and learning needs of all of our children by reaching out to families, exchanging ideas and information, and raising necessary funds. More importantly, we make sure we come together as a community to enrich our children’s lives.</p>
+
+<p>Every parent or guardian and teacher is automatically a member of our organization, and each family is entitled to one vote. There are many ways to help: families can choose to make an annual donation, participate with organizing and planning various parent-led fundraising events throughout the year, or help continue our community-building programs which offer free events. The PTA hosts programs and services that make our school community unique and wonderful, and help our children grow into confident, enthusiastic life-long learners.</p>
+
+<p>There are many ways to <a href="/and-more/">get involved</a> and <a href="/annual-appeal/#contribute">support the MNS PTA</a>.</p>
+
+<p>We look forward to making this year a success!</p>
+
+<div class="media-row">
+  <img src="/assets/images/mns-front.jpeg" alt="The front of P.S. 290 / Manhattan New School" />
+  <div>
+    <h3>Useful links</h3>
+    <ul>
+      <li>Read our bylaws to learn about the mission, policies and structure of the PTA.</li>
+      <li>Issue an <a href="https://script.google.com/macros/s/AKfycbxmjKBj319bzOkiG3BhYUORaFw2gjgqq6GE47_k7NwUE3zu8nB7s7xfDZYVuF0g78PWaA/exec">Expense Reimbursement Request</a> to the MNS PTA treasurers.</li>
+      <li>Submit the <a href="https://script.google.com/macros/s/AKfycbyGkq3TnM6SGiTO5dkEqGOIWv_cnBLPoe86ZrKzNUcoeHXbfFwFDqdI-0_r38LUWpE-/exec">Unpaid Invoices Form</a> for payment.</li>
+    </ul>
+  </div>
+</div>
+
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__brand">PS290 PTA</p>
+    <p class="site-footer__address">311 E 82nd St, New York, NY 10028 · (212) 734-7127</p>
+    <p class="site-footer__links">
+      <a href="mailto:info@mnspta.org">info@mnspta.org</a>
+      <span class="dot">·</span>
+      <a href="/calendar-subscribe/">Subscribe to calendar</a>
+      <span class="dot">·</span>
+      <a href="https://www.ps290.org">P.S. 290</a>
+    </p>
+    <p class="site-footer__copyright">© 2026 PS290 PTA</p>
+  </div>
+</footer>
+
+</body>
+</html>

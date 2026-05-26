@@ -9,6 +9,20 @@ school:
   address: "311 E 82nd St, New York, NY 10028"
   phone: "(212) 734-7127"
 
+# Home page hero slideshow. List as many images as you like — they
+# auto-advance with a crossfade. To add a slide: drop the image in
+# assets/images/ and add an entry below. To go back to a single static
+# image, leave just one entry. `interval` is seconds between slides.
+hero:
+  interval: 5
+  slides:
+    - image: /assets/images/home-banner.jpg
+      alt: Manhattan New School community
+    # - image: /assets/images/hero-2.jpg
+    #   alt: Students on the rooftop
+    # - image: /assets/images/hero-3.jpg
+    #   alt: Fall field day
+
 # External services (not migrated — keep linking out)
 external:
   donate_url: "https://ps290pta.app.neoncrm.com/campaigns/2025-2026-annual-appeal-campaign"

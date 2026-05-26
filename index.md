@@ -6,8 +6,28 @@ permalink: /
 ---
 
 <section class="hero">
-  <div class="hero__image">
-    <img src="{{ '/assets/images/home-banner.jpg' | relative_url }}" alt="Manhattan New School community">
+  {%- assign slides = site.hero.slides -%}
+  <div class="hero__slideshow{% if slides.size > 1 %} is-slideshow{% endif %}"
+       data-interval="{{ site.hero.interval | default: 5 }}"
+       role="region" aria-roledescription="carousel" aria-label="Photos of the MNS community">
+    {%- for slide in slides %}
+    <div class="hero__slide{% if forloop.first %} is-active{% endif %}"
+         {% unless forloop.first %}aria-hidden="true"{% endunless %}>
+      <img src="{{ slide.image | relative_url }}" alt="{{ slide.alt }}"
+           {% unless forloop.first %}loading="lazy"{% endunless %}>
+    </div>
+    {%- endfor %}
+
+    {%- if slides.size > 1 %}
+    <div class="hero__dots" role="tablist" aria-label="Choose slide">
+      {%- for slide in slides %}
+      <button class="hero__dot{% if forloop.first %} is-active{% endif %}"
+              type="button" role="tab"
+              aria-label="Slide {{ forloop.index }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+      {%- endfor %}
+    </div>
+    {%- endif %}
   </div>
   <div class="hero__statement">
     <p>The Manhattan New School Parent-Teacher Association supports the school community, working together to help our children grow into confident, enthusiastic life-long learners.</p>
@@ -64,3 +84,62 @@ permalink: /
     <li><a href="{{ site.external.unpaid_invoices_form }}">Submit unpaid invoices for payment</a></li>
   </ul>
 </section>
+<script>
+  (function () {
+    var shows = document.querySelectorAll('.hero__slideshow.is-slideshow');
+    shows.forEach(function (show) {
+      var slides = Array.prototype.slice.call(show.querySelectorAll('.hero__slide'));
+      var dots = Array.prototype.slice.call(show.querySelectorAll('.hero__dot'));
+      if (slides.length < 2) return;
+
+      var interval = (parseFloat(show.getAttribute('data-interval')) || 5) * 1000;
+      var current = 0;
+      var timer = null;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function show_slide(next) {
+        next = (next + slides.length) % slides.length;
+        slides[current].classList.remove('is-active');
+        slides[current].setAttribute('aria-hidden', 'true');
+        slides[next].classList.add('is-active');
+        slides[next].removeAttribute('aria-hidden');
+        if (dots.length) {
+          dots[current].classList.remove('is-active');
+          dots[current].setAttribute('aria-selected', 'false');
+          dots[next].classList.add('is-active');
+          dots[next].setAttribute('aria-selected', 'true');
+        }
+        current = next;
+      }
+
+      function start() {
+        if (reduce || timer) return;
+        timer = setInterval(function () { show_slide(current + 1); }, interval);
+      }
+      function stop() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          stop();
+          show_slide(i);
+          start();
+        });
+      });
+
+      // Pause on hover / focus so people can read
+      show.addEventListener('mouseenter', stop);
+      show.addEventListener('mouseleave', start);
+      show.addEventListener('focusin', stop);
+      show.addEventListener('focusout', start);
+
+      // Pause when the tab is hidden
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) { stop(); } else { start(); }
+      });
+
+      start();
+    });
+  })();
+</script>

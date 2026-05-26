@@ -43,17 +43,20 @@ Jekyll's toolchain may not fully support yet. Pin a known-good Ruby with
 rbenv instead of using the Homebrew default:
 
 ```bash
-brew install rbenv
+# if your computer isn't set up for ruby & rbenv already, run these 3 lines
+# brew install rbenv
+# echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
+# source ~/.zshrc
 rbenv init          # then add the printed line to ~/.zshrc and restart your shell
 rbenv install 3.3.6
-cd /path/to/this/repo
+# cd /path/to/repo  # if you aren't in the repo already
 rbenv local 3.3.6   # writes .ruby-version — pins ONLY this folder to 3.3.6
 ruby -v             # confirm it shows 3.3.6 here
 gem install bundler
 bundle install
 ```
 
-`rbenv local` leaves your system Ruby (4.0) untouched everywhere else; the
+`rbenv local` leaves your system Ruby untouched everywhere else; the
 pin applies only inside this directory. If a future Jekyll release supports
 Ruby 4 cleanly, you can delete `.ruby-version` and skip rbenv entirely.
 

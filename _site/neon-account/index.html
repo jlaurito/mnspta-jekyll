@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Parent Login (Neon Account) — MNS PTA</title>
+  <meta name="description" content="The Manhattan New School Parent-Teacher Association supports the school community, working together to help our children grow into confident, enthusiastic life-long learners.">
+  <link rel="icon" type="image/png" href="/assets/images/logo_200x200.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <meta property="og:title" content="Parent Login (Neon Account) — MNS PTA">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/neon-account/">
+  <meta property="og:image" content="http://localhost:4000/assets/images/logo_200x200.png">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <header class="site-header">
+  <div class="site-header__top">
+    <a class="site-header__brand" href="/">
+      <img src="/assets/images/logo-wordmark.png" alt="MNS PTA" />
+    </a>
+    <div class="site-header__meta">
+      <p class="site-header__eyebrow">Parent Teacher Association</p>
+      <p class="site-header__contact">
+        311 E 82nd St, New York, NY 10028 <span class="dot">·</span> (212) 734-7127
+      </p>
+    </div>
+  </div>
+
+  <nav class="site-nav" aria-label="Primary">
+    <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-menu">
+      <span class="site-nav__toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <ul id="site-nav-menu" class="site-nav__menu">
+      <li><a href="/">Home</a></li>
+      <li class="has-submenu">
+        <a href="/about-mns-pta/">About <span aria-hidden="true">▾</span></a>
+        <ul class="site-nav__submenu">
+          <li><a href="/about-mns-pta/">MNS PTA</a></li>
+          <li><a href="/executive-board/">Executive &amp; Parent Leadership</a></li>
+          <li><a href="/and-more/">Volunteer</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="/annual-appeal/">Fundraising <span aria-hidden="true">▾</span></a>
+        <ul class="site-nav__submenu">
+          <li><a href="/annual-appeal/">Annual Appeal</a></li>
+          <li><a href="/shopping-rewards/">Shopping Rewards</a></li>
+          <li><a href="/matching-gifts/">Matching Gifts</a></li>
+          <li><a href="https://ps290.square.site">School Store</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="/after-school/">Programs &amp; Activities <span aria-hidden="true">▾</span></a>
+        <ul class="site-nav__submenu">
+          <li><a href="/mns-cares/">MNS Cares</a></li>
+          <li><a href="/after-school/">After School</a></li>
+          <li><a href="/upcoming-events/">Upcoming Events</a></li>
+        </ul>
+      </li>
+      <li><a href="/neon-account/">Parent Login</a></li>
+      <li><a href="https://www.ps290.org">P.S. 290</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  (function () {
+    var toggle = document.querySelector('.site-nav__toggle');
+    var menu = document.getElementById('site-nav-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function () {
+      var open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    // Mobile: tap parent to expand submenu
+    document.querySelectorAll('.site-nav .has-submenu > a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (window.matchMedia('(max-width: 800px)').matches) {
+          e.preventDefault();
+          link.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  })();
+</script>
+
+  <main class="page">
+    <article class="content">
+  
+    <header class="content__header">
+      <h1>Parent Login (Neon Account)</h1>
+      
+    </header>
+  
+  <div class="content__body">
+    <div class="media-row">
+  <img src="/assets/images/did-you-know.png" alt="Did you know?" />
+  <div>
+    <p>With a Neon account, families can register for school events, <a href="https://ps290pta.app.neoncrm.com/campaigns/2025-2026-annual-appeal-campaign">donate to the Annual Appeal</a>, search the parent directory for PS 290 friends, and so much more. By holding a MNS Neon account, you will also enroll in the school and PTA's mailing list.</p>
+    <p>Signing up is quick and easy. Email <a href="mailto:info@mnspta.org">info@mnspta.org</a> for further questions or assistance.</p>
+    <p><a class="btn btn--primary" href="https://ps290pta.app.neoncrm.com/np/clients/ps290pta/login.jsp">Log in now</a></p>
+  </div>
+</div>
+
+<h2 id="instructions-for-neon-sign-up">Instructions for Neon sign-up</h2>
+
+<p>The Neon system helps families. You can sign up for events in advance, donate to the Annual Appeal, and make other school-related purchases. Neon also handles our email system and provides a Member Directory for MNS families. Since Neon is used for sending out email blasts from the PTA, <strong>make sure your contact information is correct and your child’s grade/class is updated for the current school year.</strong></p>
+
+<h3 id="dont-know-your-neon-login-information">Don’t know your Neon login information?</h3>
+
+<p>If you were an MNS family last year and have been receiving emails from the PTA, you already have a Neon account. If you are not sure of your login information, click <a href="https://ps290pta.app.neoncrm.com/np/clients/ps290pta/login.jsp">Log in now</a>, enter your email address, then click the “Forgot Password” link. You’ll be able to reset your password and access your account.</p>
+
+<p>If you are a new MNS family, click <a href="https://ps290pta.app.neoncrm.com/np/clients/ps290pta/login.jsp">Log in now</a>, then click “Create a new account.” Please make sure to fill in the information for all your children at MNS so that you receive communication specific to your child’s grade.</p>
+
+<p>To be added to our Member Directory, you’ll need to create a Membership: once you have created your account and logged in to Neon, click on <strong>My Membership</strong>. You may choose <em>One year term (automatically renew)</em> or <em>Life Join</em> — they are basically equivalent. Then click <strong>submit</strong>, and your contact information will be included in our Membership Directory.</p>
+
+<h3 id="how-do-i-access-the-member-directory">How do I access the Member Directory?</h3>
+
+<p>The Member Directory is available on the right-side menu once logged into Neon. If you would like to opt out of the Directory, you may do so by clicking on <strong>Member Directory</strong> and then <strong>Update my profile listed on the membership directory</strong>.</p>
+
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__brand">PS290 PTA</p>
+    <p class="site-footer__address">311 E 82nd St, New York, NY 10028 · (212) 734-7127</p>
+    <p class="site-footer__links">
+      <a href="mailto:info@mnspta.org">info@mnspta.org</a>
+      <span class="dot">·</span>
+      <a href="/calendar-subscribe/">Subscribe to calendar</a>
+      <span class="dot">·</span>
+      <a href="https://www.ps290.org">P.S. 290</a>
+    </p>
+    <p class="site-footer__copyright">© 2026 PS290 PTA</p>
+  </div>
+</footer>
+
+</body>
+</html>
