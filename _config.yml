@@ -5,6 +5,7 @@ description: >-
   community, working together to help our children grow into confident,
   enthusiastic life-long learners.
 url: "https://www.mnspta.org"
+baseurl: ""
 school:
   address: "311 E 82nd St, New York, NY 10028"
   phone: "(212) 734-7127"
