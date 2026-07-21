@@ -138,7 +138,8 @@ parent_leaders:
   - role: Tech Team
     members:
       - Josh Laurito
-    email: webmaster
+      - Luke Berg
+    email: tech
 
   - role: School Store
     email: schoolstore
