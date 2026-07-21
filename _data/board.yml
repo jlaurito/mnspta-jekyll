@@ -15,7 +15,7 @@
 #   sub_roles — optional list of {name, email} for groups with
 #              multiple contact addresses (e.g. Communications Team)
 
-school_year: "2025–2026"
+school_year: "2026–2027"
 
 executive_board:
   - role: Co-Presidents
@@ -25,14 +25,19 @@ executive_board:
 
   - role: Co-Vice Presidents
     members:
-      - Michelle Abella Schwartz
-      - Elena Mandell
+      - Shruti Raju
       - Josh Kaufman
+      - Amanda Larkin
 
   - role: Recording Secretary
     members:
       - Ariella Lustberg
       - Alexis Bancroft
+
+  - role: Co-Corresponding Secretary
+    members:
+      - Nick Adrian
+      - Jessica Brucia
 
   - role: Treasurer
     members:
@@ -44,49 +49,61 @@ executive_board:
       - Nellie Harkins
       - Jenny Cornetet
 
+  - role: 3K Delegates
+    members:
+      - (Elected in Fall)
+
+  - role: Pre-K Delegates
+    members:
+      - (Elected in Fall)
+
+  - role: Kindergarten Delegates
+    members:
+      - (Elected in Fall)
+
   - role: First Grade Delegates
     members:
-      - Alexis Bancroft
-      - Ariella Lustberg
-      - Caitlin Benson
+      - Jen Feldstein
+      - Beth Bertoldi
+      - Sara Seiden
     email: firstgradedelegates
 
   - role: Second Grade Delegates
     members:
-      - Jewel Clarke
-      - Kristen Marsh
-      - Jackie Levy
+      - Kristen Serrao
+      - Caitlin Benson
     email: secondgradedelegates
 
   - role: Third Grade Delegates
     members:
-      - Nellie Harkins
-      - Jennifer Osterweil
-      - Shruti Raju
+      - Jewel Clarke
+      - Kristen Marsh
+      - Danielle Fleming
     email: thirdgradedelegates
 
   - role: Fourth Grade Delegates
     members:
-      - Meredith Karson
-      - Caroline Paris
+      - Nellie Harkins
+      - Jennifer Osterweil
+      - Emily McKeough
     email: fourthgradedelegates
 
   - role: Fifth Grade Delegates
     members:
-      - Stacey Garfinkle
-      - Kristen Serrao
-      - Emily McKeough
+      - Meredith Karson
+      - Caroline Paris
+      - Michelle Schwartz
     email: fifthgradedelegates
 
   - role: School Leadership Team
     members:
-      - Nadia Levy
-      - Michael Horenstein
-      - Pamela Mclaughlin
-      - Elizabeth Wolf
-      - Caroline Paris
+      - Lauren Rubin
       - Jennifer Pomerantz
+      - Yael Warach
       - Fred Isquith
+      - Samantha Stoitsov
+      - Pamela McLaughlin
+      - Elizabeth Wolf
     email: slt
 
 parent_leaders:
