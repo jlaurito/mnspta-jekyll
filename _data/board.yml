@@ -22,19 +22,26 @@ executive_board:
     members:
       - Ben Holzer
       - Sharon Abramzon D'Agostino
+    email: president
 
-  - role: Co-Vice Presidents
+  - role: Vice President for Committee Support
     members:
       - Shruti Raju
+
+  - role: Vice President for Legal Affairs and Risk
+    members:
       - Josh Kaufman
+
+  - role: Vice President for Fundraising
+    members:
       - Amanda Larkin
 
-  - role: Recording Secretary
+  - role: Recording Secretaries
     members:
       - Ariella Lustberg
       - Alexis Bancroft
 
-  - role: Co-Corresponding Secretary
+  - role: Corresponding Secretaries
     members:
       - Nick Adrian
       - Jessica Brucia
@@ -44,7 +51,7 @@ executive_board:
       - Tamara Dethlefsen
     email: treasurer
 
-  - role: Assistant Treasurer
+  - role: Assistant Treasurers
     members:
       - Nellie Harkins
       - Jenny Cornetet
