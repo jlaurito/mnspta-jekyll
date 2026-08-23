@@ -18,7 +18,6 @@ We fund bigger "extras" like:
 …as well as very basic items like:
 
 - pest control
-- air conditioning in each classroom
 - additional school security and equipment
 
 We are only able to pay for these things, of course, if parents choose to donate to the PTA. Donations are in no way mandatory, but always greatly appreciated.
@@ -29,10 +28,15 @@ Thank you in advance for your donations. Every little bit helps keep our school 
 
 ---
 
+You can donate below, but please read the note below before you make your donation via Givebutter. [You can also read more about why the MNS PTA chose to use Givebutter](/about-givebutter/).  
+
 <b>Why is there a toggle option?</b>
 We use [Givebutter](https://givebutter.com/pricing) because of their Givebutter Guarantee: as long as this toggle remains enabled, they reimburse our school for 100% of all credit card processing fees. This ensures every single dollar you spend goes directly back to the kids. 
 
-<b><u>If you do not wish to leave a tip or pay a fee today, simply select 'Other' from the dropdown menu and change the amount to 0</u></b>.
+<b><u>If you do not wish to leave a tip or pay a fee today:</u></b>
+* Set the tip to $0. Look for the tip line — usually a set of percentage buttons or a dropdown. <b><u>Choose "Other" and enter 0.</u></b>
+* Decline the processing fee. There's a checkbox or toggle offering to cover transaction costs. <b><u>Uncheck it</u></b>.
+* <u><b>Check your total before submitting</b></u>. The final amount appears on the last step. It should match your intended gift exactly.
 
 
 <givebutter-widget id="g6WDya"></givebutter-widget>
