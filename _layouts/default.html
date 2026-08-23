@@ -16,6 +16,12 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/assets/images/logo_200x200.png' | absolute_url }}">
   <meta name="twitter:card" content="summary">
+  {% if page.permalink == "/annual-appeal/" %}
+  <script
+    async
+    src="https://widgets.givebutter.com/latest.umd.cjs?acct=Td2cmvhJWMGiYhbH&p=other"
+  ></script>
+  {% endif %}
 </head>
 <body>
   {% include nav.html %}

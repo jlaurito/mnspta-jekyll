@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The MNS Annual Appeal
+title: The MNS Annual Fund
 permalink: /annual-appeal/
 redirect_from:
   - /annual-appeal-2-2/
@@ -23,15 +23,19 @@ We fund bigger "extras" like:
 
 We are only able to pay for these things, of course, if parents choose to donate to the PTA. Donations are in no way mandatory, but always greatly appreciated.
 
-Our major fundraiser is the yearly **Annual Appeal — it is the most direct and effective way you can support MNS.** The costs for our PTA expenses break down to $1,550 per child. We appreciate donations throughout the school year to plan, organize, and sustain programs for our children and school staff. If everyone pitches in, no matter the amount, we can reach our goal of 100% participation and raise $250,000 together.
+Our major fundraiser is the yearly appeal for the **Annual Fund — it is the most direct and effective way you can support MNS.** The costs for our PTA expenses break down to $1,650 per child. We appreciate donations throughout the school year to plan, organize, and sustain programs for our children and school staff. If everyone pitches in, no matter the amount, we can reach our goal of 100% participation and raise $275,000 together.
 
 Thank you in advance for your donations. Every little bit helps keep our school a success.
 
-<div class="cta-block" id="contribute">
-  <h2>Contribute now to the Annual Appeal</h2>
-  <p>We prefer all donations be made online.</p>
-  <a class="btn btn--primary" href="{{ site.external.donate_url }}">Donate</a>
-</div>
+---
+
+<b>Why is there a toggle option?</b>
+We use [Givebutter](https://givebutter.com/pricing) because of their Givebutter Guarantee: as long as this toggle remains enabled, they reimburse our school for 100% of all credit card processing fees. This ensures every single dollar you spend goes directly back to the kids. 
+
+<b><u>If you do not wish to leave a tip or pay a fee today, simply select 'Other' from the dropdown menu and change the amount to 0</u></b>.
+
+
+<givebutter-widget id="g6WDya"></givebutter-widget>
 
 If you prefer to pay by check, please make it payable to **MNS PTA** (please note "Annual Appeal" and your child's name in the memo line).
 

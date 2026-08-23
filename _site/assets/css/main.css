@@ -546,14 +546,8 @@ p { margin: 0 0 1em; }
 }
 .callout p:last-child { margin-bottom: 0; }
 
-.cta-block {
-  text-align: center;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  margin: 2rem 0;
-  box-shadow: var(--shadow-sm);
+#givebutter-widget {
+  text-align: center; /* or */
+  margin: 0 auto;
+  max-width: 500px;
 }
-.cta-block h2 { margin-top: 0; }
-.cta-block .btn { margin-top: 0.5rem; }
