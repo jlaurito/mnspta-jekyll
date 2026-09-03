@@ -35,7 +35,7 @@ permalink: /
 </section>
 
 <section class="calendar">
-  <iframe src="https://calendar.google.com/calendar/embed?src=calendar%40mnspta.org&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://calendar.google.com/calendar/embed?src=calendar%40mnspta.org&ctz=America%2FNew_York" style="border: 0; text-align:center;" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </section>
 
 <section class="tile-grid">
