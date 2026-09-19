@@ -33,8 +33,6 @@ external:
   donate_url: "https://ps290pta.app.neoncrm.com/campaigns/2025-2026-annual-appeal-campaign"
   generic_donate_url: "https://ps290pta.app.neoncrm.com/np/clients/ps290pta/donation.jsp"
   neon_login_url: "https://ps290pta.app.neoncrm.com/np/clients/ps290pta/login.jsp"
-  school_store_url: "https://ps290.square.site"
-  spirit_store_url: "https://ps290pta.app.neoncrm.com/np/clients/ps290pta/giftstore.jsp"
   ps290_url: "https://www.ps290.org"
   google_calendar_embed: "https://calendar.google.com/calendar/u/0/embed?src=calendar@mnspta.org&ctz=America/New_York&pli=1"
   google_calendar_ical: "https://calendar.google.com/calendar/ical/calendar%40mnspta.org/public/basic.ics"

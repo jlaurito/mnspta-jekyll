@@ -161,7 +161,7 @@ site:
 | Service | Used for |
 |---|---|
 | Neon CRM (`ps290pta.app.neoncrm.com`) | Donations, event registration, parent directory, login |
-| Square (`ps290.square.site`) | School store |
+| Square (`ps290.square.site`) | School store (removed 9/2026) |
 | Google Calendar | Calendar feed |
 | Google Forms | Volunteer sign-up |
 | Google Apps Scripts | Expense reimbursement, unpaid invoices forms |

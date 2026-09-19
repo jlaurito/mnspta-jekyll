@@ -65,12 +65,6 @@ permalink: /
 <div class="section-divider"><hr></div>
 
 <section class="tile-grid">
-  <div class="tile">
-    <img src="{{ '/assets/images/school-store.png' | relative_url }}" alt="MNS School Spirit Store">
-    <h3>School Store</h3>
-    <p>Take a look at the full catalog of MNS school spirit items.</p>
-    <a class="tile__cta" href="{{ site.external.spirit_store_url }}">Visit the store →</a>
-  </div>
 
   <div class="tile">
     <img src="{{ '/assets/images/mns-bulletin.png' | relative_url }}" alt="MNS Bulletin">
