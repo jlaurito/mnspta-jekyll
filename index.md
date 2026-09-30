@@ -29,7 +29,7 @@ permalink: /
     </div>
     {%- endif %}
   </div>
-  <div class="hero__statement">
+  <div class="hero__statement" style="text-align: center;">
     <p>The Manhattan New School Parent-Teacher Association supports the school community, working together to help our children grow into confident, enthusiastic life-long learners.</p>
   </div>
 </section>
