@@ -29,12 +29,12 @@ permalink: /
     </div>
     {%- endif %}
   </div>
-  <div class="hero__statement" style="text-align: center;">
+  <div class="hero__statement">
     <p>The Manhattan New School Parent-Teacher Association supports the school community, working together to help our children grow into confident, enthusiastic life-long learners.</p>
   </div>
 </section>
 
-<section class="calendar">
+<section class="calendar" style="text-align: center;">
   <iframe src="https://calendar.google.com/calendar/embed?src=calendar%40mnspta.org&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </section>
 
