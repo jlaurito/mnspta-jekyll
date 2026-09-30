@@ -28,7 +28,7 @@ executive_board:
     members:
       - Shruti Raju
 
-  - role: Vice President for Legal Affairs and Risk
+  - role: Vice President for Legal Affairs and Risk Management
     members:
       - Josh Kaufman
 
@@ -43,7 +43,6 @@ executive_board:
 
   - role: Corresponding Secretaries
     members:
-      - Nick Adrian
       - Jessica Brucia
 
   - role: Treasurer
