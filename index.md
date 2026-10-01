@@ -62,17 +62,6 @@ permalink: /
   </div>
 </section>
 
-<div class="section-divider"><hr></div>
-
-<section class="tile-grid">
-
-  <div class="tile">
-    <img src="{{ '/assets/images/mns-bulletin.png' | relative_url }}" alt="MNS Bulletin">
-    <h3>Welcome from your PTA presidents</h3>
-    <p>Read this year's welcome email — what to expect, who to contact, and how to plug in.</p>
-    <a class="tile__cta" href="{{ site.external.welcome_email }}">Read the welcome →</a>
-  </div>
-</section>
 
 <section class="quick-links">
   <h2>Quick links</h2>

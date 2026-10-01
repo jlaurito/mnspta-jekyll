@@ -39,7 +39,7 @@ external:
   ps290_url: "https://www.ps290.org"
   google_calendar_embed: "https://calendar.google.com/calendar/u/0/embed?src=calendar@mnspta.org&ctz=America/New_York&pli=1"
   google_calendar_ical: "https://calendar.google.com/calendar/ical/calendar%40mnspta.org/public/basic.ics"
-#  volunteer_form: "https://docs.google.com/forms/d/1qKvs2soiTsD8gpO_1O_5ekOoFHUyO3L9_yLBIdaVkZY/viewform?edit_requested=true"
+  volunteer_form: "https://docs.google.com/forms/d/e/1FAIpQLSffsi4PCUE6c1mLG7fHGmvV7Qqf4xtgX-jgDbc1XwEck_Hb0w/viewform"
   expense_reimbursement_form: "https://script.google.com/macros/s/AKfycbxmjKBj319bzOkiG3BhYUORaFw2gjgqq6GE47_k7NwUE3zu8nB7s7xfDZYVuF0g78PWaA/exec"
   unpaid_invoices_form: "https://script.google.com/macros/s/AKfycbyGkq3TnM6SGiTO5dkEqGOIWv_cnBLPoe86ZrKzNUcoeHXbfFwFDqdI-0_r38LUWpE-/exec"
   welcome_email: "https://api.neonemails.com/emails/content/ty_kEnhmPY6KURKO_ViaA8Xqpe7_Sp4PZ4GBZdgJP-k="
