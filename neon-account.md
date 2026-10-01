@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Parent Login (Neon Account)
+title: Using Givebutter
 permalink: /neon-account/
 redirect_from:
   - /parent-login/
