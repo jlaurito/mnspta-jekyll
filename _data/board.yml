@@ -52,32 +52,36 @@ executive_board:
 
   - role: Assistant Treasurers
     members:
-      - Nellie Harkins
       - Jenny Cornetet
+      - Nellie Harkins
 
   - role: 3K Delegates
     members:
-      - (Elected in Fall)
+      - Simone Waugh-Manning
 
   - role: Pre-K Delegates
     members:
-      - (Elected in Fall)
+      - Katlin Burks
+      - Kara Hesch
 
   - role: Kindergarten Delegates
     members:
-      - (Elected in Fall)
+      - Claudia Felth
+      - Hristina Kostic
+      - Sari Anchipolovsky
 
   - role: First Grade Delegates
     members:
-      - Jen Feldstein
       - Beth Bertoldi
+      - Jen Feldstein
       - Sara Seiden
     email: firstgradedelegates
 
   - role: Second Grade Delegates
     members:
-      - Kristen Serrao
       - Caitlin Benson
+      - Kristen Serrao
+      - Samantha Stoitsov
     email: secondgradedelegates
 
   - role: Third Grade Delegates
@@ -96,20 +100,20 @@ executive_board:
 
   - role: Fifth Grade Delegates
     members:
-      - Meredith Karson
       - Caroline Paris
+      - Meredith Karson
       - Michelle Schwartz
     email: fifthgradedelegates
 
   - role: School Leadership Team
     members:
-      - Lauren Rubin
-      - Jennifer Pomerantz
-      - Yael Warach
-      - Fred Isquith
-      - Samantha Stoitsov
-      - Pamela McLaughlin
       - Elizabeth Wolf
+      - Fred Isquith
+      - Jennifer Pomerantz
+      - Lauren Rubin
+      - Pamela McLaughlin
+      - Samantha Stoitsov
+      - Yael Warach     
     email: slt
 
 parent_leaders:
