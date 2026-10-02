@@ -13,5 +13,5 @@ For questions or to jump right in, drop us a line at [info@mnspta.org](mailto:in
 <div class="cta-block">
   <h2>Ready to help?</h2>
   <p>Tell us a little about yourself and how you'd like to pitch in.</p>
-  <a class="btn btn--primary" href="{{ site.external.volunteer_form }}">Register to volunteer</a>
+  <a class="btn btn--primary" href="{{ site.external.volunteer_form }}">Opportunities to help</a>
 </div>
