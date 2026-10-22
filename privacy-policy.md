@@ -7,7 +7,7 @@ permalink: /privacy-policy/
 
 <b>MNS PTA Donor Privacy Notice</b>
 
-</i>Last updated: October 2026</i>
+*Last updated: October 2026*
 
 When you donate to MNS PTA, we collect the information needed to process and acknowledge your gift. That includes your name, email address, mailing address, donation details, and, if you provide it, your employer. Our online giving tools may also automatically collect technical information such as your IP address and general location.
 
